@@ -12,10 +12,10 @@ import java.util.Map;
 public class ExpresionExample {
     public static void main(String[] args) throws IOException {
 
-//        ANTLRInputStream input = new ANTLRInputStream(new FileInputStream("test/test1"));
-//        ExprLexer lexer = new ExprLexer(input);
-//        CommonTokenStream tokens = new CommonTokenStream(lexer);
-//        ExprParser parser = new ExprParser(tokens);
+        ANTLRInputStream input = new ANTLRInputStream(new FileInputStream("test/test1"));
+        ExprLexer lexer = new ExprLexer(input);
+        CommonTokenStream tokens = new CommonTokenStream(lexer);
+        ExprParser parser = new ExprParser(tokens);
 
         // CREATE LEXER/PARSER THAT CREATES AST FROM INPUT
         CLexer lexer = new CLexer(new ANTLRInputStream(input));
