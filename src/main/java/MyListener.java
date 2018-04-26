@@ -20,7 +20,7 @@ public class MyListener implements ExprListener {
     }
 
     public void enterExpr(ExprParser.ExprContext ctx) {
-
+        System.out.println("Found expression! " + ctx.depth());
     }
 
     public void exitExpr(ExprParser.ExprContext ctx) {
@@ -28,7 +28,7 @@ public class MyListener implements ExprListener {
     }
 
     public void visitTerminal(TerminalNode terminalNode) {
-        System.out.println(terminalNode.getSymbol() + "==> thats my symbol!");
+        System.out.println(terminalNode.getText() + "==> thats my symbol!");
     }
 
     public void visitErrorNode(ErrorNode errorNode) {
