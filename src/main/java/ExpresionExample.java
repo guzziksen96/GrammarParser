@@ -1,5 +1,4 @@
 
-import org.antlr.v4.gui.Trees;
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;
 
@@ -11,7 +10,7 @@ public class ExpresionExample {
         CommonTokenStream tokens = new CommonTokenStream(lexer);
         RubyParser parser = new RubyParser(tokens);
 
-        //Trees.inspect(parser.prog(),parser);
+        //Trees.inspect(parser.prog(),parser); Visualisation
 
         parser.addParseListener(new MyRubyListener());
         parser.prog();

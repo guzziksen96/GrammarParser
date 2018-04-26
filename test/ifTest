@@ -1,10 +1,13 @@
-if var == 10
-a = 1
-elsif var == 5
-a = 5
+if var == 1
+ a = 1
+elsif var == 2
+ a = 2
 else
- if var == 2
- a = 6
- b = 7
+ a = 3
+ if var == 3
+  c = 1
+ else
+  c = 2
  end
+ b = 1
 end
