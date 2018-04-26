@@ -1,31 +1,22 @@
 
+import org.antlr.v4.gui.Trees;
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;
 
 import java.io.*;
 public class ExpresionExample {
-    public static void ifExample() throws IOException {
-        ANTLRInputStream input = new ANTLRInputStream(new FileInputStream("test/ifTest"));
+    public static void exampleParse(String testFileName) throws IOException {
+        ANTLRInputStream input = new ANTLRInputStream(new FileInputStream(testFileName));
         RubyLexer lexer = new RubyLexer(input);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
         RubyParser parser = new RubyParser(tokens);
 
-        //Trees.inspect(parser.prog(),parser); Visualisation
-
         parser.addParseListener(new MyRubyListener());
-        parser.prog();
+        Trees.inspect(parser.prog(),parser);
     }
 
     public static void main(String[] args) throws IOException {
-
-        if (5==5) {
-
-        } else {
-            if (5==3) {
-
-            }
-        }
-
-        ExpresionExample.ifExample();
+        ExpresionExample.exampleParse("test/ifTest");
+        ExpresionExample.exampleParse("test/whileTest");
     }
 }
