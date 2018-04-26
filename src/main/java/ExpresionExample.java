@@ -17,6 +17,9 @@ public class ExpresionExample {
 
     public static void main(String[] args) throws IOException {
         ExpresionExample.exampleParse("test/ifTest");
+        System.out.println();
         ExpresionExample.exampleParse("test/whileTest");
+        System.out.println();
+        ExpresionExample.exampleParse("test/defTest");
     }
 }

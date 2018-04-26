@@ -1,0 +1,3 @@
+def sqr()
+    return 5+5*5
+end
