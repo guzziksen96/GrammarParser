@@ -1,4 +1,5 @@
 
+import org.antlr.v4.gui.Trees;
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;
 
@@ -10,19 +11,21 @@ public class ExpresionExample {
         CommonTokenStream tokens = new CommonTokenStream(lexer);
         RubyParser parser = new RubyParser(tokens);
 
+        //Trees.inspect(parser.prog(),parser);
+
         parser.addParseListener(new MyRubyListener());
         parser.prog();
     }
 
     public static void main(String[] args) throws IOException {
 
-        /*ANTLRInputStream input = new ANTLRInputStream(new FileInputStream("test/test1"));
-        ExprLexer lexer = new ExprLexer(input);
-        CommonTokenStream tokens = new CommonTokenStream(lexer);
-        ExprParser parser = new ExprParser(tokens);
+        if (5==5) {
 
-        parser.addParseListener(new MyListener());
-        parser.prog();*/
+        } else {
+            if (5==3) {
+
+            }
+        }
 
         ExpresionExample.ifExample();
     }

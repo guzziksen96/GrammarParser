@@ -1,3 +1,10 @@
 if var == 10
-var = 20
+a = 1
+elsif var == 5
+a = 5
+else
+ if var == 2
+ a = 6
+ b = 7
+ end
 end
